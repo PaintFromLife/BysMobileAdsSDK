@@ -48,13 +48,9 @@
 		<data>
 		TOxRMsraL65RurYm7cjvbee0UY0=
 		</data>
-		<key>Headers/BysMobileAds.h</key>
-		<data>
-		0FveoJS1TbISRSRZa4YVhAl0H5o=
-		</data>
 		<key>Info.plist</key>
 		<data>
-		fxzsUyRKvelwHwbNvYWuOM4MwAo=
+		2YricckOXnLpL06J/tgPGbD4X54=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -182,17 +178,6 @@
 			<key>hash2</key>
 			<data>
 			YXG5QNLWmJwjNeCjvoj7NXB+rDVa9Hs9LOJEXBCg74E=
-			</data>
-		</dict>
-		<key>Headers/BysMobileAds.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			0FveoJS1TbISRSRZa4YVhAl0H5o=
-			</data>
-			<key>hash2</key>
-			<data>
-			9MuveEzk5hIlm+xdWsmLA37IuQN8hBGCfl9la9iu0aU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
