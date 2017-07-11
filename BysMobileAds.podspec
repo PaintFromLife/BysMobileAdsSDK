@@ -1,0 +1,24 @@
+
+Pod::Spec.new do |s|
+
+
+  s.name         = "BYSDKMobileAds"
+  s.version      = "0.0.0.1"
+  s.summary      = "BysMobileAds_sdk"
+  s.description  = <<-DESC
+        BysMobileAds_SDK (0.0.0.1)
+                   DESC
+  s.homepage     = "https://github.com/baiyisoftware/BysMobileAdsSDK"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
+
+
+  s.author       = { "TemaSir" => "tianxin@gsoft.cc" }
+  s.platform     = :ios, "8.0"
+  s.source       = { :git => "https://github.com/baiyisoftware/BysMobileAdsSDK.git", :tag => s.version }
+  s.frameworks   = "UIKit","Foundation","AVFoundation","objc","Security","MobileCoreServices","CoreGraphics","StoreKit"
+  s.requires_arc = false
+  s.ios.vendored_frameworks = 'BysMobileAds_SDK/BysMobileAds.framework'
+  #s.xcconfig  = { 'USER_HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)"' }
+  #s.dependency 'FBSDKCoreKit'
+  s.resource     = 'Resources/BYSAdBundle.bundle'
+end

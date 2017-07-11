@@ -1,0 +1,6 @@
+framework module BysMobileAds {
+  umbrella header "BysMobileAds.h"
+
+  export *
+  module * { export * }
+}
