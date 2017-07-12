@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BYSAdBaseAdView.h"
+#import <BysMobileAds/BYSAdBaseAdView.h>
 
 @interface BYSAdBannerView : BYSAdBaseAdView
     
