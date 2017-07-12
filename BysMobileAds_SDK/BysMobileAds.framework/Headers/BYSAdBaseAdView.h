@@ -1,15 +1,12 @@
 //
 //  BYSAdBaseAdView.h
-//  Unity-iPhone
+//  BysMobileAds
 //
-//  Created by hanJianXin on 16/12/30.
+//  Created by 陕西百益软件有限公司 on 16/12/30.
 //
 //
 
 #import <UIKit/UIKit.h>
-#import "BYSAdDataModels.h"
-#import "BYSAdBannerUnitInfoModel.h"
-#import "BYSAdUtil.h"
 #import <AVFoundation/AVFoundation.h>
 
 
@@ -17,27 +14,23 @@
 
 @optional
 
-- (void)adViewDidReceiveAD:(id)adView;                                      /// ad data load sucess callback
-- (void)adView:(id)adView didFailToReceiveAdWithError:(NSString *)error;    /// ad data load false callback
-- (void)adViewOnClicked:(id)adView;                     /// ad view is clicked callback
-- (void)adViewWillPresentScreen:(id)adView;           /// ad view will show on screen callback
-- (void)adViewDidPresentScreen:(id)adView;            /// ad view is show on screen callback
-- (void)adViewOnClosed:(id)adView;                    /// ad view close callback
+- (void)adViewDidReceiveAD:(nullable id)adView;                                      /// ad data load sucess callback
+- (void)adView:(nullable id)adView didFailToReceiveAdWithError:(nullable NSError *)error;    /// ad data load false callback
+- (void)adViewOnClicked:(nullable id)adView;                     /// ad view is clicked callback
+- (void)adViewWillPresentScreen:(nullable id)adView;           /// ad view will show on screen callback
+- (void)adViewDidPresentScreen:(nullable id)adView;            /// ad view is show on screen callback
+- (void)adViewOnClosed:(nullable id)adView;                    /// ad view close callback
 
-- (void)adViewPlayVideo:(id)adView;
-- (void)adViewPlayVideoFinished:(id)adView;
+- (void)adViewPlayVideo:(nullable id)adView;
+- (void)adViewPlayVideoFinished:(nullable id)adView;
 
 @end
 
 
 @interface BYSAdBaseAdView : UIImageView
 
-@property(nonatomic, strong) NSString *unitKey;             /// unit key
-@property(nonatomic, assign) id<BYADAdViewDelegate> adDelegate;    /// ad view delegate
-@property(nonatomic, strong) BYADAdDataModel *curAdModel;
-@property(nonatomic, strong) BYSAdBannerUnitInfoModel *adUnitInfo;               /// ad unit info
-
-@property(nonatomic, strong) NSMutableArray *dataArray;
+@property(nonatomic, strong ,nonnull ,readonly) NSString *unitKey;             /// unit key
+@property(nonatomic, assign ,nonnull) id<BYADAdViewDelegate> adDelegate;    /// ad view delegate
 
 /// load ad data list
 - (void)loadAdList;
@@ -46,7 +39,7 @@
 - (void)afterLoadADList;
 
 /// do some ad init and fetch ad position infomation
-- (void)initWithUnit:(NSString *)unityKey;
+- (void)initWithUnit:(nullable NSString *)unityKey;
 
 /// show close button and webUrl button
 - (void)showFunctionButtons;
@@ -54,7 +47,7 @@
 /// remove ad view
 - (void)removeADView;
 
-- (void)playeMovie:(NSString *)urlStr;
+- (void)playeMovie:(nullable NSString *)urlStr;
 
 - (void)shutDownMovieShow;
 

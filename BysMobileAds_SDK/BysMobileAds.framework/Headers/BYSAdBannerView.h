@@ -1,15 +1,13 @@
 //
 //  BYSAdBannerView.h
-//  Unity-iPhone
+//  BysMobileAds
 //
-//  Created by hanJianXin on 16/12/30.
+//  Created by 陕西百益软件有限公司 on 16/12/30.
 //
 //
 
 #import <UIKit/UIKit.h>
-#import "BYSAdDataModels.h"
 #import "BYSAdBaseAdView.h"
-#import "BYSAdBannerScrollView.h"
 
 @interface BYSAdBannerView : BYSAdBaseAdView
     

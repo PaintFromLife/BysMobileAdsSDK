@@ -1,8 +1,8 @@
 //
-//  BYADScrollView.h
-//  Unity-iPhone
+//  BYSAdLaunchView.h
+//  BysMobileAds
 //
-//  Created by hanJianXin on 17/1/11.
+//  Created by 陕西百益软件有限公司 on 17/1/11.
 //
 //
 
@@ -13,18 +13,17 @@
 @protocol BYSAdLaunchViewDelegate <NSObject>
 
 @required
-- (void)BYSAdLaunchView:(BYSAdLaunchView *)launchView didSelectedAtIndex:(NSInteger)index;
-- (void)BYSAdLaunchViewNotAutoClose:(BYSAdLaunchView *)launchView;
-- (void)BYSAdLaunchViewShutdown:(BYSAdLaunchView *)launchView;
-- (void)BYSAdLaunchViewPlayVideo:(BYSAdLaunchView *)launchView;
-- (void)BYSAdLaunchViewPlayVideoFinished:(BYSAdLaunchView *)launchView;
+
+- (void)BYSAdLaunchView:(nullable BYSAdLaunchView *)launchView didSelectedAtIndex:(NSInteger)index;
+- (void)BYSAdLaunchViewNotAutoClose:(nullable BYSAdLaunchView *)launchView;
+- (void)BYSAdLaunchViewShutdown:(nullable BYSAdLaunchView *)launchView;
+- (void)BYSAdLaunchViewPlayVideo:(nullable BYSAdLaunchView *)launchView;
+- (void)BYSAdLaunchViewPlayVideoFinished:(nullable BYSAdLaunchView *)launchView;
 
 @end
 
-
 @interface BYSAdLaunchView : UIView
 
-@property(nonatomic, copy) NSArray *dataArray;
-@property(nonatomic, assign) id<BYSAdLaunchViewDelegate> adDelegate;
+@property(nonatomic, assign ,nonnull) id<BYSAdLaunchViewDelegate> adDelegate;
 
 @end

@@ -1,8 +1,8 @@
 //
 //  BYSAdBanner.h
-//  Unity-iPhone
+//  BysMobileAds
 //
-//  Created by hanJianXin on 16/12/30.
+//  Created by 陕西百益软件有限公司 on 16/12/30.
 //
 //
 
@@ -10,11 +10,12 @@
 #import <UIKit/UIKit.h>
 
 @class BYSAdBanner;
+@class BYSAdBannerView;
 @protocol BYSAdBannerDelegate <NSObject>
 
 @required
 - (void)BannerDidReceivedData:(BYSAdBanner *)banner;
-- (void)BannerFailToReceiveData:(BYSAdBanner *)ad withError:(NSString *)error;
+- (void)BannerFailToReceiveData:(BYSAdBanner *)ad withError:(NSError *)error;
 - (void)BannerWillPresent:(BYSAdBanner *)banner;
 - (void)BannerDidPresent:(BYSAdBanner *)banner;
 - (void)BannerDidClicked:(BYSAdBanner *)banner;
@@ -24,10 +25,6 @@
 - (void)BannerPlayVideoFinshed:(BYSAdBanner *)banner;
 
 @end
-
-
-
-@class BYSAdBannerView;
 
 /// Positions to place a banner.
 typedef NS_ENUM(NSUInteger, BYAdPosition) {
