@@ -1,13 +1,13 @@
 //
 //  BYSAdInstitialView.h
-//  BysMobileAds
+//  MakeSDK
 //
 //  Created by 陕西百益软件有限公司 on 16/12/20.
 //  Copyright © 2016年 陕西百益软件有限公司. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <BysMobileAds/BYSAdBaseAdView.h>
+#import "BYSAdBaseAdView.h"
 
 @interface BYSAdInstitialView :BYSAdBaseAdView
 

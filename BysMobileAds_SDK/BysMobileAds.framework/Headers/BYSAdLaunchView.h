@@ -1,6 +1,6 @@
 //
-//  BYSAdLaunchView.h
-//  BysMobileAds
+//  BYADScrollView.h
+//  Unity-iPhone
 //
 //  Created by 陕西百益软件有限公司 on 17/1/11.
 //
