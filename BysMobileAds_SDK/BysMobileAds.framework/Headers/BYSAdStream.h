@@ -1,6 +1,6 @@
 //
 //  BYSAdStream.h
-//  BYADAdDemo
+//  Bys-Mobile-Ads-SDK
 //
 //  Created by 陕西百益软件有限公司 on 17/2/15.
 //  Copyright © 2017年 陕西百益软件有限公司. All rights reserved.

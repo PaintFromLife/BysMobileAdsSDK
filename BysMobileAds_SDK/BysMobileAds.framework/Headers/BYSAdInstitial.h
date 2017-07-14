@@ -1,6 +1,6 @@
 //
 //  BYStitialADManger.h
-//  MakeSDK
+//  Bys-Mobile-Ads-SDK
 //
 //  Created by 陕西百益软件有限公司 on 16/12/1.
 //  Copyright © 2016年 陕西百益软件有限公司. All rights reserved.

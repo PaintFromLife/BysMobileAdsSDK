@@ -1,6 +1,6 @@
 //
 //  BYADScrollView.h
-//  Unity-iPhone
+//  Bys-Mobile-Ads-SDK
 //
 //  Created by 陕西百益软件有限公司 on 17/1/11.
 //
