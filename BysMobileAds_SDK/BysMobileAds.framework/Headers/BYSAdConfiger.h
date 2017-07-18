@@ -7,66 +7,55 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <BysMobileAds/BYSMobileAdsDefines.h>
+
+BYSAD_ASSUME_NONNULL_BEGIN
+
+FOUNDATION_EXPORT NSString *const BYSAdConfigerDidConfigurationCompletionNotification;
 
 @class BYSAdConfiger;
 
 @protocol BYADConfigerDelegate <NSObject>
-/**
- Ad configuration successfully callback
 
- @param configer BYSAdConfiger
- */
-- (void)ConfigerDidSucess:(nullable BYSAdConfiger *)configer;
+///Ad configuration successfully callback
+- (void)configerDidSucess:(BYSAdConfiger *)configer;
 
-/**
- Ad configuration failed callback with error message
-
- @param configer BYSAdConfiger
- @param error error
- */
-- (void)ConfigerDidFailed:(nullable BYSAdConfiger *)configer withError:(nullable NSError *)error;
+/// Ad configuration failed callback with error message
+- (void)configerDidFailed:(BYSAdConfiger *)configer withError:(NSError *)error;
 
 @end
+
+///AdConfiger is used to initialize the ad SDK,
+///and the initialization is successful for the display of the ad
 
 @interface BYSAdConfiger : NSObject
 
-@property (nonatomic, copy ,nonnull ,readonly)   NSString *token;
-@property (nonatomic, copy ,nonnull ,readonly)   NSNumber *modify_time;                         /// ad unit info update time
+///Ad request token
+@property (nonatomic, strong ,readonly)   NSString *token;
 
-/**
- Whether the open screen advertising is open
- */
+/// ad unit info update time
+@property (nonatomic, strong ,readonly)   NSNumber *modify_time;
+
+///Whether the open screen advertising is open
 @property (nonatomic, assign) BOOL enableLauch;
 
-@property (nonatomic, weak ,nullable) id<BYADConfigerDelegate> delegate;
+@property (nonatomic, weak) id<BYADConfigerDelegate> delegate;
 
-/**
- create or fetch ad configer single instence
- */
-+ (nonnull instancetype)sharedConfiger;
+/// create or fetch ad configer single instence
++ (instancetype)sharedConfiger;
 
-/**
- init ad condition with app key
- */
-- (void)initWithAppKey:(nonnull NSString *)appkey;
+/// init ad condition with app key
+- (void)initWithAppKey:(NSString * BYSAD_NONNULL_TYPE)appkey;
 
-/**
-check if ad condition config is done 
- */
+///check if ad condition config is done
 - (BOOL)isInitSucess;
 
-/**
- create or fetch ad configer single instence and set is delegate
+/// create or fetch ad configer single instence and set is delegate
++ (void)configerWithAppKey:(NSString *BYSAD_NONNULL_TYPE)appkey delegate:(id<BYADConfigerDelegate>)delegagte;
 
- @param appkey appkey
- @param delegagte delegagte
- */
-+ (void)ConfigerWithAppKey:(nonnull NSString *)appkey delegate:(nullable id)delegagte;
+/// init ad unit (when produce ad object you must init ad unit)
++ (BOOL)initADUnitWithUnitkey:(NSString * BYSAD_NONNULL_TYPE)unitkey;
 
-/**
- init ad unit (when produce ad object you must init ad unit)
- @param unitkey unitkey
- @return return true or fales
- */
-+ (BOOL)initADUnitWithUnitkey:(nonnull NSString *)unitkey;
 @end
+
+BYSAD_ASSUME_NONNULL_END
