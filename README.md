@@ -7,7 +7,7 @@ CocoaPods is a dependency manager for Cocoa projects. You can install it with th
 ```
 $ gem install cocoapods
 ```
-To integrate Bys-Mobile-Ads-SDK into your Xcode project using CocoaPods, specify it in your Podfile:
+To integrate BysMobileAdsSDK into your Xcode project using CocoaPods, specify it in your Podfile:
 ```
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
@@ -79,7 +79,7 @@ After some setup, using BysMobileAdsSDK is really simple. You can access an API
 }
 ```
 
-#Stream ads
+<h3>Stream ads</h3>
 ```
 #import "ViewController.h"
 #import <BysMobileAds/BYSAdStreamView.h>
@@ -138,7 +138,7 @@ After some setup, using BysMobileAdsSDK is really simple. You can access an API
 }
 @end
 ```
-#Banner ads
+<h3>Banner ads</h3>
 ```
 #import "ViewController.h"
 #import <BysMobileAds/BYSAdBannerView.h>
@@ -229,7 +229,7 @@ After some setup, using BysMobileAdsSDK is really simple. You can access an API
 }
 @end
 ```
-#Institial Ads
+<h3>Institial Ads</h3>
 ```
 #import "ViewController.h"
 #import <BysMobileAds/BYSAdInstitialView.h>
