@@ -17,7 +17,7 @@ BYSAD_ASSUME_NONNULL_BEGIN
 
 @protocol BYSAdInstitialDelegate<NSObject>
 
-@required
+@optional
 
 ///The interstitial ad receives a data callback
 - (void)institialDidReceivedData:(BYSAdInstitial *)institial;

@@ -17,6 +17,8 @@ FOUNDATION_EXPORT NSString *const BYSAdConfigerDidConfigurationCompletionNotific
 
 @protocol BYADConfigerDelegate <NSObject>
 
+@optional
+
 ///Ad configuration successfully callback
 - (void)configerDidSucess:(BYSAdConfiger *)configer;
 

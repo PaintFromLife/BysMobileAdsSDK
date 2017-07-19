@@ -15,21 +15,6 @@ BYSAD_ASSUME_NONNULL_BEGIN
 @class BYSAdBanner;
 @class BYSAdBannerView;
 
-@protocol BYSAdBannerDelegate <NSObject>
-
-@required
-- (void)BannerDidReceivedData:(BYSAdBanner *)banner;
-- (void)BannerFailToReceiveData:(BYSAdBanner *)ad withError:(NSError *)error;
-- (void)BannerWillPresent:(BYSAdBanner *)banner;
-- (void)BannerDidPresent:(BYSAdBanner *)banner;
-- (void)BannerDidClicked:(BYSAdBanner *)banner;
-- (void)BannerDidClosed:(BYSAdBanner *)banner;
-
-- (void)BannerPlayVideo:(BYSAdBanner *)banner;
-- (void)BannerPlayVideoFinshed:(BYSAdBanner *)banner;
-
-@end
-
 /// Positions to place a banner.
 typedef NS_ENUM(NSUInteger, BYAdPosition) {
     BYADAdPositionTopOfScreen = 0,      ///< Ad positioned at top of screen.
@@ -39,6 +24,39 @@ typedef NS_ENUM(NSUInteger, BYAdPosition) {
     BYADAdPositionBottomLeftOfScreen ,  ///< Ad positioned at bottom left of screen.
     BYADAdPositionBottomRightOfScreen   ///< Ad positioned at bottom right of screen.
 };
+
+
+@protocol BYSAdBannerDelegate <NSObject>
+
+@optional
+
+///Banner ad receives a data callback
+- (void)bannerDidReceivedData:(BYSAdBanner *)banner;
+
+///Banner ad received data failed callback
+- (void)bannerFailToReceiveData:(BYSAdBanner *)ad withError:(NSError *)error;
+
+///Banner ads are coming soon
+- (void)bannerWillPresent:(BYSAdBanner *)banner;
+
+///Banner ads have already appeared
+- (void)bannerDidPresent:(BYSAdBanner *)banner;
+
+///Banner ad click
+- (void)bannerDidClicked:(BYSAdBanner *)banner;
+
+///Banner ad is closed
+- (void)bannerDidClosed:(BYSAdBanner *)banner;
+
+
+///Banner ad plays video
+- (void)bannerPlayVideo:(BYSAdBanner *)banner;
+
+///Banner ad video playback is complete
+- (void)bannerPlayVideoFinshed:(BYSAdBanner *)banner;
+
+@end
+
 
 /// A wrapper around BYSAdBannerView. Includes the ability to create BYSAdBannerView objects, load them
 /// with ads, and listen for ad events.

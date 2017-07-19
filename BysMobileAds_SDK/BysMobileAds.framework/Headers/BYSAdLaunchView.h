@@ -17,53 +17,54 @@ BYSAD_ASSUME_NONNULL_BEGIN
 
 @protocol BYSAdLaunchDelegate <NSObject>
 
-@required
+@optional
 
 ///When the screen ads receive data, callback
-- (void)LaunchDidReceivedData:(BYSAdLaunch *)launch;
+- (void)launchDidReceivedData:(BYSAdLaunch *)launch;
 
 ///The open screen ad receives a callback when the data fails
-- (void)LaunchFailToReceiveData:(BYSAdLaunch *)launch withError:(NSError *)error;
+- (void)launchFailToReceiveData:(BYSAdLaunch *)launch withError:(NSError *)error;
 
 ///Open screen advertising video callback callback
-- (void)LaunchPlayVideo:(BYSAdLaunch *)launch;
+- (void)launchPlayVideo:(BYSAdLaunch *)launch;
 
 ///Open screen advertising video playback is complete
-- (void)LaunchPlayVideoFinished:(BYSAdLaunch *)launch;
+- (void)launchPlayVideoFinished:(BYSAdLaunch *)launch;
 
 ///Open screen ad click
-- (void)LaunchDidClicked:(BYSAdLaunch *)launch;
+- (void)launchDidClicked:(BYSAdLaunch *)launch;
 
 ///Open screen ads closed
-- (void)LaunchDidClosed:(BYSAdLaunch *)launch;
+- (void)launchDidClosed:(BYSAdLaunch *)launch;
 
 @end
 
 @protocol BYSAdLaunchViewDelegate <NSObject>
 
-@required
+@optional
 ///Open a screen to select the current page
-- (void)BYSAdLaunchView:(BYSAdLaunchView *)launchView didSelectedAtIndex:(NSInteger)index;
+- (void)launchView:(BYSAdLaunchView *)launchView didSelectedAtIndex:(NSInteger)index;
 
 ///The open screen ad slides and does not close when the callback is made
-- (void)BYSAdLaunchViewNotAutoClose:(BYSAdLaunchView *)launchView;
+- (void)launchViewNotAutoClose:(BYSAdLaunchView *)launchView;
 
 ///Callback when open screen ad is hidden
-- (void)BYSAdLaunchViewShutdown:(BYSAdLaunchView *)launchView;
+- (void)launchViewShutdown:(BYSAdLaunchView *)launchView;
 
 ///Open screen advertising video playback callback
-- (void)BYSAdLaunchViewPlayVideo:(BYSAdLaunchView *)launchView;
+- (void)launchViewPlayVideo:(BYSAdLaunchView *)launchView;
 
 ///Open screen advertising video playback is complete
-- (void)BYSAdLaunchViewPlayVideoFinished:(BYSAdLaunchView *)launchView;
+- (void)launchViewPlayVideoFinished:(BYSAdLaunchView *)launchView;
 
 @end
-
 
 
 ///AdLaunch is used to initialize the configuration of open screen ads
 
 @interface BYSAdLaunch : NSObject
+
+@property (nonatomic, strong ,readonly) BYSAdLaunchView *launchView;
 
 @property(nonatomic, weak) id<BYSAdLaunchDelegate> delegate;
 
@@ -74,7 +75,7 @@ BYSAD_ASSUME_NONNULL_BEGIN
 - (void)initADLaunchWithUnitkey:(NSString * BYSAD_NULLABLE_TYPE)unitKey;
 
 /// create open ad instance and set it's delegate
-+ (void)ConfigLaunchWithUnitKey:(NSString * BYSAD_NULLABLE_TYPE)unityKey delegate:(id<BYSAdLaunchDelegate>)delegate;
++ (void)configLaunchWithUnitKey:(NSString * BYSAD_NULLABLE_TYPE)unityKey delegate:(id<BYSAdLaunchDelegate>)delegate;
 
 @end
 

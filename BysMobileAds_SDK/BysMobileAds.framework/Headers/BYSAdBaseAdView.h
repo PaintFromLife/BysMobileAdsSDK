@@ -17,28 +17,28 @@ BYSAD_ASSUME_NONNULL_BEGIN
 @optional
 
 /// ad data load sucess callback
-- (void)adViewDidReceiveAD:(BYSAD_NULLABLE id)adView;
+- (void)adViewDidReceiveAD:(id BYSAD_NULLABLE_TYPE)adView;
 
 /// ad data load false callback
-- (void)adView:(BYSAD_NULLABLE id)adView didFailToReceiveAdWithError:(BYSAD_NULLABLE NSError *)error;
+- (void)adView:(id BYSAD_NULLABLE_TYPE)adView didFailToReceiveAdWithError:(NSError *BYSAD_NULLABLE_TYPE)error;
 
 /// ad view is clicked callback
-- (void)adViewOnClicked:(BYSAD_NULLABLE id)adView;
+- (void)adViewOnClicked:(id BYSAD_NULLABLE_TYPE)adView;
 
 /// ad view will show on screen callback
-- (void)adViewWillPresentScreen:(BYSAD_NULLABLE id)adView;
+- (void)adViewWillPresentScreen:(id BYSAD_NULLABLE_TYPE)adView;
 
 /// ad view is show on screen callback
-- (void)adViewDidPresentScreen:(BYSAD_NULLABLE id)adView;
+- (void)adViewDidPresentScreen:(id BYSAD_NULLABLE_TYPE)adView;
 
 /// ad view close callback
-- (void)adViewOnClosed:(BYSAD_NULLABLE id)adView;
+- (void)adViewOnClosed:(id BYSAD_NULLABLE_TYPE)adView;
 
 /// ad view play video callback
-- (void)adViewPlayVideo:(BYSAD_NULLABLE id)adView;
+- (void)adViewPlayVideo:(id BYSAD_NULLABLE_TYPE)adView;
 
 /// ad view play video finish callback
-- (void)adViewPlayVideoFinished:(BYSAD_NULLABLE id)adView;
+- (void)adViewPlayVideoFinished:(id BYSAD_NULLABLE_TYPE)adView;
 
 @end
 

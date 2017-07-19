@@ -12,27 +12,30 @@ BYSAD_ASSUME_NONNULL_BEGIN
 
 @class BYSAdStream;
 @class BYSAdStreamView;
-@protocol BYSAdStreamViewDelegate;
 
 @protocol BYSAdStreamDelegate <NSObject>
 
 @optional
 
 /// ad data load sucess callback
-- (void)BYSAdStreamDidReceiveData:(BYSAdStream *)streamAd;
+- (void)streamDidReceiveData:(BYSAdStream *)streamAd;
 
 /// ad data load false callback
-- (void)BYSAdStream:(BYSAdStream *)Ad didFailToReceiveDataWithError:(NSError *)error;
+- (void)stream:(BYSAdStream *)Ad didFailToReceiveDataWithError:(NSError *)error;
 
 @end
 
 @protocol BYSAdStreamViewDelegate <NSObject>
 
+@optional
+
 ///When an ad stream ad is clicked
-- (void)BYSAdStreamViewDidClicked:(BYSAdStreamView *)streamView;
+- (void)streamViewDidClicked:(BYSAdStreamView *)streamView;
+
+@required
 
 //When the stream ad load is complete
-- (void)BYSAdStreamViewLayoutFinished:(BYSAdStreamView *)streamView;
+- (void)streamViewLayoutFinished:(BYSAdStreamView *)streamView;
 
 @end
 
@@ -75,11 +78,11 @@ BYSAD_ASSUME_NONNULL_BEGIN
 
 /// Unify configuration view parameters
 - (void)setTitleFont:(UIFont *)titleFont
-        SubTitleFont:(UIFont *)subTitleFont
-         ContentFont:(UIFont *)ContentFont
-          TitleColor:(UIColor *)titleColor
-       SubTitleColor:(UIColor *)subTitleColor
-        ContentColor:(UIColor *)ContentColor;
+        subTitleFont:(UIFont *)subTitleFont
+         contentFont:(UIFont *)contentFont
+          titleColor:(UIColor *)titleColor
+       subTitleColor:(UIColor *)subTitleColor
+        contentColor:(UIColor *)contentColor;
 
 @end
 
