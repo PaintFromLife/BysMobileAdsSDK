@@ -3,10 +3,10 @@ Pod::Spec.new do |s|
 
 
   s.name         = "BysMobileAds"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "BysMobileAds_SDK"
   s.description  = <<-DESC
-        BysMobileAds_SDK (0.0.1)
+        BysMobileAds_SDK (0.0.3)
                    DESC
   s.homepage     = "https://github.com/baiyisoftware/BysMobileAdsSDK"
   s.license      = { :type => "MIT", :file => "LICENSE" }
