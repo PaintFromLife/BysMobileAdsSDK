@@ -3,10 +3,10 @@ Pod::Spec.new do |s|
 
 
   s.name         = "BysMobileAds"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "BysMobileAds_SDK"
   s.description  = <<-DESC
-        BysMobileAds_SDK (0.0.3)
+        BysMobileAds_SDK (0.0.4)
                    DESC
   s.homepage     = "https://github.com/baiyisoftware/BysMobileAdsSDK"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'BysMobileAds_SDK/BysMobileAds.framework'
   #s.xcconfig  = { 'USER_HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)"' }
   #s.dependency 'FBSDKCoreKit'
-  s.resource     = 'Resources/BYSAdBundle.bundle'
+  #s.resource     = 'Resources/BYSAdBundle.bundle'
 end
