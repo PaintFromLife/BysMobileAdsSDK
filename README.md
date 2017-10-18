@@ -21,10 +21,7 @@ Then, run the following command:
 ```
 $ pod install
 ```
-<h3>Usage</h3>
-After some setup, using BysMobileAdsSDK is really simple. You can access an API like this
 
-```
 
 
 
