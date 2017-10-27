@@ -22,6 +22,11 @@ Complete the e-mail verification for your account.
 
 
 
+
+
+
+
+
 ## Monetize | Getting Started
 	•	Step 1: Creating an AdCools Account
 	•	Step 2: Registering your App
@@ -41,6 +46,11 @@ Complete the e-mail verification for your account.
 ![Start3](media/15090975244643/Start3.png)
 ####Start Monetizing Now!
 [iOS Guidelines](media/15090975244643/%3Ch1%3EiOS%E5%B9%BF%E5%91%8A%E9%9B%86%E6%88%90%E6%96%87%E6%A1%A3%3C-h1%3E.html)
+
+
+
+
+
 
 
 ###iOS Guidelines | Banner Ads
@@ -133,6 +143,9 @@ For ad status callbacks, implement the delegate property of Banner. The followin
 }```
 
 	
+	
+
+
 
 
 ###iOS Guidelines | Institial Ads
@@ -219,6 +232,9 @@ For ad status callbacks, implement the delegate property of Institia. The follow
 	
 
 
+
+
+
 ###iOS Guidelines | Launch Ads
 Open screen ads are full page ads placed at natural, placed in the APP start time.With 10 times the real estate as compared to Launch ads, Interstitials are guaranteed to catch your user's' eye and drive higher revenue for your mobile business..
 
@@ -295,6 +311,10 @@ For ad status callbacks, implement the delegate property of Launch. The followin
 	
 
 
+
+
+
+
 ###iOS Guidelines | Native Ads
 BysMobileAds Native ads seamlessly blend in with your app’s content, maximizing user engagement without compromising on user experience. You can choose and customize the layout that best matches the design of your app. It is ideal for news, utility and communication apps.
 
@@ -315,7 +335,7 @@ Once you create the Native placement, you will have the placement id.
 ####Creating a Native Ad
 Native ads are only displayed in the ad to respond to the UIView subclasses that the user touches. The following provides the mechanism by which the BysMobileAds SDK provides Native ads:
 
-**a. Programmatic Instantiation**
+**Programmatic Instantiation**
 Import the headers and declare a Native Stream instance in your ViewController.h file. Your ViewController header file should look like this:
 ```
 #import <UIKit/UIKit.h>
