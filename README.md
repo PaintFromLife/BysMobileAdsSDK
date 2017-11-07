@@ -45,7 +45,9 @@ pod install
 **Method 2**: Integrating the framework directl
 Add the following MANDATORY frameworks to your Xcode project:
 	•	BysMobileAds.framework from the downloaded AdCools iOS SDK bundle
-	![DemoApp1](media/15090677250069/DemoApp1.png)
+	
+	
+![DemoApp1](media/15090677250069/DemoApp1.png)
 
 
 
@@ -61,6 +63,7 @@ App Transport Security (ATS), a default setting introduced with iOS 9 that manda
 While we work with our partners progressing towards a secure environment, to ensure ads work on iOS 9 and later versions, you need to follow these steps as a near-term fix:
 
 **• Disable ATS** (Recommended) - to ensure non-secure content from the partners work correctly in your updated apps. To disable ATS flag, add the following code snippet to your app's Info.plist.
+
 ![targettingForiOS93](media/15090677250069/targettingForiOS93.png)
 
 ```
