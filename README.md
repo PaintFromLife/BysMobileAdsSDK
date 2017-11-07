@@ -125,7 +125,7 @@ Start monetizing your iOS app with these ad formats:
 [Native Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Native%20Ads.html)
 
 
-
+                                                                                                                                                              
 ### Banner
 Banner Ads are graphical ad, typically including a combination of static/animated images and text designed to convey a marketing message and/or cause the user to take an action. All types of apps can leverage banner ads for monetization.
 
