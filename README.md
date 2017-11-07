@@ -54,7 +54,8 @@ Add the following MANDATORY frameworks to your Xcode project:
 ![DemoApp2](media/15090677250069/DemoApp2.png)
 
 <span id="iOS 9+"></span>
-####Preparing your App for iOS 9+
+<h4>Preparing your App for iOS 9+</h4>
+
 App Transport Security (ATS), a default setting introduced with iOS 9 that mandates apps to make network connections only over TLS version 1.2 and later. Though InMobi is committed towards the adoption of HTTPS, the current setup requires our demand partners to support this change and be 100% compliant with all the requirements of ATS.
 While we work with our partners progressing towards a secure environment, to ensure ads work on iOS 9 and later versions, you need to follow these steps as a near-term fix:
 
@@ -109,7 +110,7 @@ Then implement the proxy method in AppDelegate.
 
 Start monetizing your iOS app with these ad formats:
 
-   • [Banner Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Banner%20Ads.html)
+   •   [Banner Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Banner%20Ads.html)
 	•	[Banner Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Banner%20Ads.html)
 	•	[Interstitial Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Institial%20Ads.html)
 	•	[Open Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Launch%20Ads.html)
