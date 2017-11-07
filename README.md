@@ -1,4 +1,5 @@
-<h2>iOS Guidelines</h2>
+
+<h1>iOS Guidelines</h1>
 
 You can get started with the following:
 
