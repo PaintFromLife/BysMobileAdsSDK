@@ -32,8 +32,9 @@ b. Add the following to Podfile.
 ```
 pod 'BysMobileAds', '~> 0.0.7
 ```
-Then, run the following command:
- 
+Then, run the following command: 
+
+
 c. Run the command below to complete the task for dependency. 	
 
 ```
@@ -58,7 +59,7 @@ Add the following MANDATORY frameworks to your Xcode project:
 App Transport Security (ATS), a default setting introduced with iOS 9 that mandates apps to make network connections only over TLS version 1.2 and later. Though InMobi is committed towards the adoption of HTTPS, the current setup requires our demand partners to support this change and be 100% compliant with all the requirements of ATS.
 While we work with our partners progressing towards a secure environment, to ensure ads work on iOS 9 and later versions, you need to follow these steps as a near-term fix:
 
-**• Disable ATS** (Recommended) - to ensure non-secure content from the partners work correctly in your updated apps. To disable ATS flag, add the following code snippet to your app's Info.plist.
+**Disable ATS** (Recommended) - to ensure non-secure content from the partners work correctly in your updated apps. To disable ATS flag, add the following code snippet to your app's Info.plist.
 
 ![targettingForiOS93](media/15090677250069/targettingForiOS93.png)
 
@@ -150,7 +151,7 @@ Once you create the banner placement, you will have the placement id.
 
 Banner is a subclass of UIView that shows and the corresponding user touches the native ad. Here's how the BysMobileAds SDK banner ad is initialized.
 
-**a. Programmatic Instantiation**
+**Programmatic Instantiation**
 
 Import the headers and declare a Banner instance in your ViewController.h file. Your ViewController header file should look like this:
 
@@ -240,7 +241,9 @@ Follow these steps to start monetizing with Institial ads:
 [Creating a Institial Ad](#create)
 	
 <span id="setting"></span>
+
 **Setting up a Institial Ad**
+
 After adding your app, select Institial AD to create a placement for ad type Institial.
 
 ![Institia](media/15090721913999/Institial1.png)
@@ -258,7 +261,8 @@ The Institia is simply a UIImage subclass displaying full screen ads that respon
 
 Import the headers and declare an interstitial instance in your ViewController.h file. Your ViewController header file should look like this:
 
-**a. Programmatic Instantiation**
+**Programmatic Instantiation**
+
 Import the headers and declare a Institial instance in your ViewController.h file. Your ViewController header file should look like this:
 
 ```
@@ -326,6 +330,7 @@ For ad status callbacks, implement the delegate property of Institia. The follow
 
 
 ### Launch
+
 Open screen ads are full page ads placed at natural, placed in the APP start time.With 10 times the real estate as compared to Launch ads, Interstitials are guaranteed to catch your user's' eye and drive higher revenue for your mobile business..
 
 Follow these steps to start monetizing with Launch ads:
@@ -335,7 +340,9 @@ Follow these steps to start monetizing with Launch ads:
 [Creating a Launch Ad](#create)
 	
 <span id="setting"></span>
+
 **Setting up a Launch Ad**
+
 After adding your app, select Launch AD to create a placement for ad type Launch.
 
 ![open1](media/15090721904061/open1.png)
@@ -420,7 +427,9 @@ Follow these steps to start monetizing with Native ads:
 [Creating a Native Ad](#create)	
 
 <span id="setting"></span>
+
 **Setting up a Native Ad**
+
 After adding your app, select Native AD to create a placement for ad type Native.
 
 ![Native1](media/15090712650517/Native1.png)
