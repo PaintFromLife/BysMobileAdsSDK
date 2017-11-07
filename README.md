@@ -3,9 +3,12 @@
 <h2>iOS Guidelines</h2>
 You can get started with the following:
 
-	•	[Adding the SDK to your Project](#SDK)
-	•	[Preparing your App for iOS 9+](#iOS 9+)
-	•	[Initializing the SDK](#Initializing)
+[Adding the SDK to your Project](#SDK)
+	
+[Preparing your App for iOS 9+](#iOS 9+)
+	
+[Initializing the SDK](#Initializing)
+
 The latest version of AdCools SDK supports iOS 8 and later. Also, this version of iOS SDK requires XCode 8.0 and later.
 
 | Version         | 0.01               | 
