@@ -10,7 +10,7 @@ You can get started with the following:
 
 The latest version of AdCools SDK supports iOS 8 and later. Also, this version of iOS SDK requires XCode 8.0 and later.
 
-| Version         | 0.01               | 
+| Version         | 0.07               | 
 | -------------   |:-------------:      | 
 | Size (.IPA Inflation)        | 1.51 MB |    
 | SDK Link|[Download SDK](https://github.com/baiyisoftware/BysMobileAdsSDK)、 [Change Logs](https://github.com/baiyisoftware/BysMobileAdsSDK) 、[GitHub (Sample Code)](https://github.com/baiyisoftware/BysMobileAdsSDK) 、[Cocoapods](https://cocoapods.org/pods/InMobiSDK)|  
