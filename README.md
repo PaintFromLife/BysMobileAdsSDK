@@ -321,6 +321,96 @@ For ad status callbacks, implement the delegate property of Institia. The follow
     NSLog(@"InstitialPlayVideoFinished");
 }
 ```
+
+
+
+
+
+### Launch Ads
+Open screen ads are full page ads placed at natural, placed in the APP start time.With 10 times the real estate as compared to Launch ads, Interstitials are guaranteed to catch your user's' eye and drive higher revenue for your mobile business..
+
+Follow these steps to start monetizing with Launch ads:
+
+[Setting up a Launch Ad](#setting)
+
+[Creating a Launch Ad](#create)
+	
+<span id="setting"></span>
+**Setting up a Launch Ad**
+After adding your app, select Launch AD to create a placement for ad type Launch.
+
+![open1](media/15090721904061/open1.png)
+
+
+Once you create the Launch placement, you will have the placement id.
+
+![open2](media/15090721904061/open2.png)
+
+<span id="create"></span>
+
+#### Creating a Launch Ad
+
+Startup is just a UIImage subclass that shows ads that can respond to user touch.
+The following BysMobileAds SDK provides the mechanism for launching ads:
+
+**a. Programmatic Instantiation**
+
+Import the headers and declare a Launch instance in your ViewController.h file. Your ViewController header file should look like this:
+
+```
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "ViewController.h"
+#import <BysMobileAds/BYSAdConfiger.h>
+#import <BysMobileAds/BYSAdLaunchView.h>
+```
+
+Instantiate the Launch object. Your ViewController.m file should look like this:
+
+
+```
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+//   Initialize the ad Api
+    [BYSAdConfiger configerWithAppKey:@"" delegate:self];
+//
+//  Set to open or close the open screen ad
+    BYSAdConfiger *configer = [BYSAdConfiger sharedConfiger];
+    configer.enableLauch = YES;
+    [BYSAdLaunch configLaunchWithUnitKey:@"" delegate:self];
+ 
+    return YES;
+}
+```
+
+
+For ad status callbacks, implement the delegate property of Launch. The following callbacks are supported:
+
+```
+#pragma mark -- BYSAdLaunchDelegate 
+- (void)launchDidReceivedData:(BYSAdLaunch *)launch{
+    NSLog(@"LaunchDidReceivedData call back");
+}
+- (void)launchFailToReceiveData:(BYSAdLaunch *)launch withError:(NSError *)error{
+    NSLog(@"LaunchFailToReceiveData call back");
+}
+- (void)launchDidClicked:(BYSAdLaunch *)launch{
+    NSLog(@"LaunchDidClicked call back");
+}
+- (void)launchDidClosed:(BYSAdLaunch *)launch{
+    NSLog(@"LaunchDidClosed call back");
+}
+- (void)launchPlayVideo:(BYSAdLaunch *)launch{
+    NSLog(@"LaunchPlayVideo call back");
+}
+- (void)launchPlayVideoFinished:(BYSAdLaunch *)launch{
+    NSLog(@"LaunchPlayVideoFinished call back");
+}
+```
+	
+
+
+
 	
 
 
