@@ -99,6 +99,8 @@ Then implement the proxy method in AppDelegate.
 }
 ```
 Start monetizing your iOS app with these ad formats:
+
+
 	•	[Banner Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Banner%20Ads.html)
 	•	[Interstitial Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Institial%20Ads.html)
 	•	[open Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Launch%20Ads.html)
