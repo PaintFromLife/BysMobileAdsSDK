@@ -4,9 +4,7 @@
 You can get started with the following:
 
 [Adding the SDK to your Project](#SDK)
-	
-[Preparing your App for iOS 9+](#iOS 9+)
-	
+[Preparing your App for iOS 9+](#iOS9)
 [Initializing the SDK](#Initializing)
 
 The latest version of AdCools SDK supports iOS 8 and later. Also, this version of iOS SDK requires XCode 8.0 and later.
@@ -58,7 +56,7 @@ Add the following MANDATORY frameworks to your Xcode project:
 
 ![DemoApp2](media/15090677250069/DemoApp2.png)
 
-<span id="iOS 9+"></span>
+<span id="iOS9"></span>
 <h4>Preparing your App for iOS 9+</h4>
 
 App Transport Security (ATS), a default setting introduced with iOS 9 that mandates apps to make network connections only over TLS version 1.2 and later. Though InMobi is committed towards the adoption of HTTPS, the current setup requires our demand partners to support this change and be 100% compliant with all the requirements of ATS.
