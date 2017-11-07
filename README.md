@@ -4,7 +4,7 @@
 
 You can get started with the following:
 
-- [Adding the SDK to your Project](#SDK)
+- [Adding the SDK to your Project](#Adding the SDK to your Project.)
 
 - [Preparing your App for iOS 9+](#iOS9)
 
@@ -21,7 +21,7 @@ The latest version of AdCools SDK supports iOS 8 and later. Also, this version o
 
 
 <span id="SDK"></span>
-<h3>Adding the SDK to your Project.</h3>
+# Adding the SDK to your Project.
 
 **Method 1**: Integration via Cocoapods (https://github.com/baiyisoftware/BysMobileAdsSDK)
 Follow these steps :
