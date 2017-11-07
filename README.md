@@ -51,9 +51,6 @@ Add the following MANDATORY frameworks to your Xcode project:
 ![DemoApp1](media/15090677250069/DemoApp1.png)
 
 
-
-
-
 • Embedded Binaries Add BysMobileAds.framework
 
 ![DemoApp2](media/15090677250069/DemoApp2.png)
@@ -75,7 +72,9 @@ While we work with our partners progressing towards a secure environment, to ens
 </dict>
 ```
 <span id="Initializing"></span>
+
 ## Initializing the SDK
+
 Import the InMobi SDK header in your AppDelegate.h file:
 
 ```
@@ -230,7 +229,7 @@ For ad status callbacks, implement the delegate property of Banner. The followin
 
 
 
-### Institial Ads
+### Institial
 
 Interstitial ads are full page ads placed at natural break points in the app flow..
 
@@ -326,7 +325,7 @@ For ad status callbacks, implement the delegate property of Institia. The follow
 
 
 
-### Launch Ads
+### Launch
 Open screen ads are full page ads placed at natural, placed in the APP start time.With 10 times the real estate as compared to Launch ads, Interstitials are guaranteed to catch your user's' eye and drive higher revenue for your mobile business..
 
 Follow these steps to start monetizing with Launch ads:
@@ -407,6 +406,95 @@ For ad status callbacks, implement the delegate property of Launch. The followin
     NSLog(@"LaunchPlayVideoFinished call back");
 }
 ```
+
+
+
+### Native
+
+BysMobileAds Native ads seamlessly blend in with your app’s content, maximizing user engagement without compromising on user experience. You can choose and customize the layout that best matches the design of your app. It is ideal for news, utility and communication apps.
+
+Follow these steps to start monetizing with Native ads:
+
+[Setting up a Native Ad](#setting)
+
+[Creating a Native Ad](#create)	
+
+<span id="setting"></span>
+**Setting up a Native Ad**
+After adding your app, select Native AD to create a placement for ad type Native.
+
+![Native1](media/15090712650517/Native1.png)
+
+Once you create the Native placement, you will have the placement id.
+
+![Native2](media/15090712650517/Native2.png)
+
+<span id="create"></span>
+
+####Creating a Native Ad
+
+Native ads are only displayed in the ad to respond to the UIView subclasses that the user touches. The following provides the mechanism by which the BysMobileAds SDK provides Native ads:
+
+**a. Programmatic Instantiation**
+
+Import the headers and declare a Native Stream instance in your ViewController.h file. Your ViewController header file should look like this:
+
+```
+#import <UIKit/UIKit.h>
+#import <BysMobileAds/BYSAdStreamView.h>
+
+@interface ViewController : UIViewController <BYSAdStreamViewDelegate,BYSAdStreamDelegate>{
+
+    BYSAdStream *_stream;
+}
+@end
+```
+
+Instantiate the Native object. Your ViewController.m file should look like this:
+
+
+```
+- (void)viewDidLoad {
+ [super viewDidLoad];
+  BYSAdStream *stream = [BYSAdStream createStreamWithUnitkey:@""];
+   stream.delegate = self;
+   _stream = stream;
+    
+   //The method call generates the Native ad, which returns the advertisement view (UIView subclass) in the callback, which can be called multiple times
+  [_stream makeAdViewWithStreamViewDelegate:self]; }
+```
+
+For ad status callbacks, implement the delegate property of Native. The following callbacks are supported:
+
+
+```
+#pragma mark -
+#pragma mark BYSAdStreamDelegate
+/// Ad data load sucess callback
+- (void)streamDidReceiveData:(BYSAdStream *)streamAd {
+
+}
+/// Ad data load false callback
+- (void)stream:(BYSAdStream *)Ad didFailToReceiveDataWithError:(NSError *)error {
+    NSLog(@"BYSAdStream receive ad data with error:%@", error);
+}
+
+#pragma mark -
+#pragma mark BYSAdStreamViewDelegate
+- (void)streamViewDidClicked:(BYSAdStreamView *)streamView {
+//    BYADAdDataModel *model = streamView.dataModel;
+//    NSLog(@"stream view did clicked model = %@",model);
+}
+/// when streamView layout is finished it's view height is formed.
+- (void)streamViewLayoutFinished:(BYSAdStreamView *)streamView {
+    /// when streamView layout is finished then append ad view to scrollView
+      [self.view addSubview:streamView];
+}
+```
+	
+
+
+
 	
 
 
