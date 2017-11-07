@@ -15,7 +15,7 @@ The latest version of AdCools SDK supports iOS 8 and later. Also, this version o
 
 
 <span id="SDK"></span>
-###Adding the SDK to your Project
+<h2>Adding the SDK to your Project</h2>
 **Method 1**: Integration via Cocoapods (https://github.com/baiyisoftware/BysMobileAdsSDK)
 Follow these steps :
 
