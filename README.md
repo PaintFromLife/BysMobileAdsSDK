@@ -1,6 +1,4 @@
-<h1>iOS广告集成文档</h1>
-
-<h2>iOS Guidelines</h2>
+<h1>iOS Guidelines</h1>
 
 You can get started with the following:
 
@@ -431,7 +429,7 @@ Once you create the Native placement, you will have the placement id.
 
 <span id="create"></span>
 
-####Creating a Native Ad
+#### Creating a Native Ad
 
 Native ads are only displayed in the ad to respond to the UIView subclasses that the user touches. The following provides the mechanism by which the BysMobileAds SDK provides Native ads:
 
