@@ -225,3 +225,102 @@ For ad status callbacks, implement the delegate property of Banner. The followin
     NSLog(@"Banner Play Video Finished");
 }
 ```
+
+
+
+
+
+### Institial Ads
+
+Interstitial ads are full page ads placed at natural break points in the app flow..
+
+Follow these steps to start monetizing with Institial ads:
+
+[Setting up a Institial Ad](#setting)
+
+[Creating a Institial Ad](#create)
+	
+<span id="setting"></span>
+**Setting up a Institial Ad**
+After adding your app, select Institial AD to create a placement for ad type Institial.
+
+![Institia](media/15090721913999/Institial1.png)
+
+
+Once you create the Institial placement, you will have the placement id.
+
+![Institia](media/15090721913999/Institial2.png)
+
+<span id="create"></span>
+
+#### Creating a Institial Ad
+
+The Institia is simply a UIImage subclass displaying full screen ads that respond to user touch.
+
+Import the headers and declare an interstitial instance in your ViewController.h file. Your ViewController header file should look like this:
+
+**a. Programmatic Instantiation**
+Import the headers and declare a Institial instance in your ViewController.h file. Your ViewController header file should look like this:
+
+```
+#import <UIKit/UIKit.h>
+#import <BysMobileAds/BYSAdInstitialView.h>
+
+@interface ViewController : UIViewController <BYSAdInstitialDelegate>{
+    BYSAdInstitial *_insititial;
+}
+@end
+```
+
+Instantiate the Institial object. Your ViewController.m file should look like this:
+
+```
+- (void)viewDidLoad {
+ [super viewDidLoad];
+  _insititial = [BYSAdInstitial createADInstitialWithUnityKey:@""];
+    _insititial.delegate = self; }
+```
+
+Banner needs to be loaded manually with the control display.
+
+```
+  [_insititial load];
+  [_insititial show];
+```
+
+Important: Create only one object per placement ID and reuse it for subsequent ad loads.
+
+For ad status callbacks, implement the delegate property of Institia. The following callbacks are supported:
+
+
+```
+#pragma -mark BYSAdInstitialDelegate
+- (void)institialDidReceivedData:(BYSAdInstitial *)Institial{
+    NSLog(@"Institial Load ok");
+}
+- (void)institialFailToReceiveData:(BYSAdInstitial *)Institial withError:(NSError *)error{
+    NSLog(@"Institial Load false");
+}
+- (void)institialWillPresent:(BYSAdInstitial *)Institial{
+    NSLog(@"Institial will present on screen");
+}
+- (void)institialDidPresent:(BYSAdInstitial *)Institial{
+    NSLog(@"Institial is show on screen");
+}
+- (void)institialDidClicked:(BYSAdInstitial *)Institial{
+    NSLog(@"Institial is clicked");
+}
+- (void)institialDidClosed:(BYSAdInstitial *)Institial{
+    NSLog(@"Institial is closed");
+}
+
+- (void)institialPlayVideo:(BYSAdInstitial *)Institial{
+    NSLog(@"InstitialPlayVideo");
+}
+- (void)institialPlayVideoFinished:(BYSAdInstitial *)Institial{
+    NSLog(@"InstitialPlayVideoFinished");
+}
+```
+	
+
+
