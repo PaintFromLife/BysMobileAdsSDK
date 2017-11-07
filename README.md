@@ -2,6 +2,7 @@
 
 <h2>iOS Guidelines</h2>
 You can get started with the following:
+
 	•	[Adding the SDK to your Project](#SDK)
 	•	[Preparing your App for iOS 9+](#iOS 9+)
 	•	[Initializing the SDK](#Initializing)
@@ -10,20 +11,24 @@ The latest version of AdCools SDK supports iOS 8 and later. Also, this version o
 | Version         | 0.01               | 
 | -------------   |:-------------:      | 
 | Size (.IPA Inflation)        | 1.51 MB | 
+
 | SDK Link        | [Download SDK](https://github.com/baiyisoftware/BysMobileAdsSDK)、 [Change Logs](https://github.com/baiyisoftware/BysMobileAdsSDK) 、[GitHub (Sample Code)](https://github.com/baiyisoftware/BysMobileAdsSDK) 	、[Cocoapods](https://cocoapods.org/pods/InMobiSDK) |  
 
 
 
 <span id="SDK"></span>
-<h3>Adding the SDK to your Project</h3>
+###Adding the SDK to your Project
+
 **Method 1**: Integration via Cocoapods (https://github.com/baiyisoftware/BysMobileAdsSDK)
 Follow these steps :
 
 a. Go to your Xcode project directory and create a pod file using the command below. 
+
 ```
 pod init
 ```
 b. Add the following to Podfile.  
+
 ```
 pod 'BysMobileAds', '~> 0.0.7
 ```
@@ -67,6 +72,7 @@ While we work with our partners progressing towards a secure environment, to ens
 <span id="Initializing"></span>
 ##Initializing the SDK
 Import the InMobi SDK header in your AppDelegate.h file:
+
 ```
 #import "ViewController.h"
 #import <BysMobileAds/BYSAdConfiger.h>
@@ -77,7 +83,9 @@ Import the InMobi SDK header in your AppDelegate.h file:
 
 @implementation AppDelegate
 ```
+
 Initialize the SDK in the didFinishLaunchingWithOptions method within the app delegate's .m file:
+
 ```
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -88,6 +96,7 @@ Initialize the SDK in the didFinishLaunchingWithOptions method within the app de
 }
 ```
 Then implement the proxy method in AppDelegate.
+
 ```
 - (void)configerDidSucess:(BYSAdConfiger *)configer {
     NSLog(@"ConfigerDidSucess call back");
@@ -98,7 +107,9 @@ Then implement the proxy method in AppDelegate.
     NSLog(@"%@",str);
 }
 ```
+
 Start monetizing your iOS app with these ad formats:
+
 	•	[Banner Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Banner%20Ads.html)
 	•	[Interstitial Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Institial%20Ads.html)
 	•	[open Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Launch%20Ads.html)
