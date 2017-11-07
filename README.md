@@ -17,7 +17,7 @@ The latest version of AdCools SDK supports iOS 8 and later. Also, this version o
 
 
 <span id="SDK"></span>
-###Adding the SDK to your Project
+<h3>Adding the SDK to your Project.</h3>
 
 **Method 1**: Integration via Cocoapods (https://github.com/baiyisoftware/BysMobileAdsSDK)
 Follow these steps :
@@ -49,7 +49,6 @@ Add the following MANDATORY frameworks to your Xcode project:
 
 
 
-
 • Embedded Binaries Add BysMobileAds.framework
 
 ![DemoApp2](media/15090677250069/DemoApp2.png)
@@ -70,7 +69,7 @@ While we work with our partners progressing towards a secure environment, to ens
 </dict>
 ```
 <span id="Initializing"></span>
-##Initializing the SDK
+<h2>Initializing the SDK</h2>
 Import the InMobi SDK header in your AppDelegate.h file:
 
 ```
@@ -110,9 +109,10 @@ Then implement the proxy method in AppDelegate.
 
 Start monetizing your iOS app with these ad formats:
 
+   • [Banner Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Banner%20Ads.html)
 	•	[Banner Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Banner%20Ads.html)
 	•	[Interstitial Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Institial%20Ads.html)
-	•	[open Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Launch%20Ads.html)
+	•	[Open Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Launch%20Ads.html)
 	•	[Native Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Native%20Ads.html)
 
 		
