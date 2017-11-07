@@ -116,7 +116,7 @@ Then implement the proxy method in AppDelegate.
 
 Start monetizing your iOS app with these ad formats:
 
-[Banner Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Banner%20Ads.html)
+[Banner Ads](Banner)
 
 [Interstitial Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Institial%20Ads.html)
 
@@ -126,7 +126,7 @@ Start monetizing your iOS app with these ad formats:
 
 
 
-### iOS Guidelines | Banner Ads
+### Banner
 Banner Ads are graphical ad, typically including a combination of static/animated images and text designed to convey a marketing message and/or cause the user to take an action. All types of apps can leverage banner ads for monetization.
 
 Follow these steps to start monetizing with Banner ads:
