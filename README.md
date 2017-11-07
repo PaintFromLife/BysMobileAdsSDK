@@ -124,5 +124,104 @@ Start monetizing your iOS app with these ad formats:
 
 [Native Ads](media/15090677250069/iOS%20Guidelines%20%7C%20Native%20Ads.html)
 
-		
 
+
+### iOS Guidelines | Banner Ads
+Banner Ads are graphical ad, typically including a combination of static/animated images and text designed to convey a marketing message and/or cause the user to take an action. All types of apps can leverage banner ads for monetization.
+
+Follow these steps to start monetizing with Banner ads:
+[Setting up a Banner Ad](#set)
+[Creating a Banner Ad](#create)
+	
+<span id="set"></span>
+
+**Setting up a Banner Ad**
+
+After adding your app, select BANNER AD to create a placement for ad type Banner.
+
+![Banne](media/15090723263108/Banner1.png)
+
+
+Once you create the banner placement, you will have the placement id.
+
+![Banne](media/15090723263108/Banner2.png)
+
+<span id="create"></span>
+#### Creating a Banner Ad
+
+Banner is a subclass of UIView that shows and the corresponding user touches the native ad. Here's how the BysMobileAds SDK banner ad is initialized.
+
+**a. Programmatic Instantiation**
+
+Import the headers and declare a Banner instance in your ViewController.h file. Your ViewController header file should look like this:
+
+```
+#import <UIKit/UIKit.h>
+#import <BysMobileAds/BYSAdBannerView.h>
+
+#define BYS_Banner              CGSizeMake(320, 50)//Custom
+
+@interface BannerDemoViewController ()<BYSAdBannerDelegate>{
+    BYSAdBanner *_banner;
+}
+```
+
+Instantiate the banner object. Your ViewController.m file should look like this:
+
+```
+- (void)viewDidLoad {
+ [super viewDidLoad];
+ /*
+ You can use the following transitions while refreshing your banner object:
+	◦	BYADAdPositionTopOfScreen
+	◦	BYADAdPositionBottomOfScreen
+	◦	BYADAdPositionTopLeftOfScreen
+	◦	BYADAdPositionTopRightOfScreen
+	◦	BYADAdPositionBottomLeftOfScreen
+	◦	BYADAdPositionBottomRightOfScreen
+ */
+  _banner = [BYSAdBanner createBannerWithUnitKey:@"" size:BYS_Banner adPosition:BYADAdPositionBottomOfScreen];
+    _banner.delegate = self; }
+```
+
+By default, Banner does not refresh, you can set the background in the developer Banner settings refresh and refresh time, in the SDK to provide refresh time settings (default is 0, that is not refreshed).
+
+```
+ [_banner setCircleTime:0];
+```
+
+Banner needs to be loaded manually with the control display.
+
+```
+    [_banner load];
+    [_banner show];
+```
+
+For ad status callbacks, implement the delegate property of Banner. The following callbacks are supported:
+
+```
+- (void)bannerDidReceivedData:(BYSAdBanner *)banner{
+    NSLog(@"Banner Load ok");
+}
+- (void)bannerFailToReceiveData:(BYSAdBanner *)ad withError:(NSError *)error{
+    NSLog(@"Banner Load false");
+}
+- (void)bannerWillPresent:(BYSAdBanner *)banner{
+    NSLog(@"Banner will present on screen");
+}
+- (void)bannerDidPresent:(BYSAdBanner *)banner{
+    NSLog(@"Banner is show on screen");
+}
+- (void)bannerDidClicked:(BYSAdBanner *)banner{
+    NSLog(@"Banner is clicked");
+}
+- (void)bannerDidClosed:(BYSAdBanner *)banner{
+    NSLog(@"Banner is closed");
+}
+- (void)bannerPlayVideo:(BYSAdBanner *)banner{
+    NSLog(@"Banner Play Video");
+}
+- (void)bannerPlayVideoFinshed:(BYSAdBanner *)banner{
+    NSLog(@"Banner Play Video Finished");
+}
+```
